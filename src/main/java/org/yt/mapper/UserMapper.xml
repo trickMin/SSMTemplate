@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.yt.mapper.UserMapper">
+
+  <!--1.查询所有用户-->
+  <select id="listAllUsers" resultType="org.yt.entity.User">
+    SELECT id,username,password,age FROM `user`
+  </select>
+
+  <!--2.通过id查询用户信息-->
+  <select id="getUserById" resultType="org.yt.entity.User">
+    SELECT id,username,password,age FROM `user` WHERE id = #{id}
+  </select>
+
+  <!--3.添加新用户-->
+  <insert id="addUser" parameterType="org.yt.entity.User">
+    INSERT INTO `user` (username,password,age) VALUES (#{username},#{password},#{age})
+  </insert>
+
+  <!--4.修改用户信息-->
+  <update id="updateUserById" parameterType="org.yt.entity.User">
+    UPDATE `user` SET username=#{username},password=#{password},age=#{age} WHERE id=#{id}
+  </update>
+
+  <!--5.删除已经存在的用户-->
+  <delete id="deleteUserById" parameterType="integer">
+    DELETE FROM `user` WHERE id=#{id}
+  </delete>
+</mapper>
