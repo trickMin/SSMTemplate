@@ -21,7 +21,7 @@
     <spring.version>4.3.7.RELEASE</spring.version>
     <jackson.verson>2.8.8</jackson.verson>
     <validator.version>5.4.1.Final</validator.version>
-    <mybatis.version>3.4.2</mybatis.version>
+    <mybatis.version>3.5.6</mybatis.version>
     <mybatis.spring.version>1.3.1</mybatis.spring.version>
     <datasource.version>0.9.1</datasource.version>
     <mysql.version>5.1.41</mysql.version>
